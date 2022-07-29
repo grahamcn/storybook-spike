@@ -1,0 +1,16 @@
+// was an idea, can't work as obv scss is pre processed, and does not update with the css custom property
+// look at if with custom prop?
+@mixin containerQuery($minWidth, $currentWidth) {
+  @if $currentWidth >= $minWidth {
+    @content;
+  }
+}
+
+// this at least encapsulates the classname in the mixin
+@mixin useContainerQuery($condition, $minWidth) {
+  @if $condition == 'minWidth' {
+    &.min-#{$minWidth} {
+      @content;
+    }
+  }
+}

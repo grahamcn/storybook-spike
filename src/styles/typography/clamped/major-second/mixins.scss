@@ -1,0 +1,25 @@
+@import './scaling.scss';
+
+@mixin responsiveFont-100() {
+  @include fontSize-100();
+}
+
+@mixin responsiveFont-200() {
+  @include fontSize-200();
+}
+
+@mixin responsiveFont-300() {
+  @include fontSize-300();
+}
+
+@mixin responsiveFont-400() {
+  @include fontSize-400();
+}
+
+@mixin responsiveFont-500() {
+  @include fontSize-500();
+}
+
+@mixin responsiveFont-600() {
+  @include fontSize-600();
+}

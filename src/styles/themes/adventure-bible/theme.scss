@@ -1,0 +1,40 @@
+@import './colour-palette.scss';
+
+// Map colours to custom properties
+:root {
+  --text-colour: #{$black};
+  --text-colour_alt: #{$white};
+
+  // the application background
+  --app-background-colour: #{$cream};
+  --app-background-colour-alt: #{$cream};
+
+  // content background
+  --surface-background-colour: #{$white};
+  --surface-background-colour-alt: #{$grey_dark};
+
+  --primary-colour: #{$orange};
+  --secondary-colour: #{$black};
+
+  // neutral greys
+  --neutral-100: #{$grey_lighter};
+  --neutral-200: #{$grey_light};
+  --neutral-300: #{$grey};
+  --neutral-400: #{$grey_dark};
+
+  // messaging and generics
+  --error: #{$red};
+  --warn: #{$orange_muted};
+  --success: #{$green};
+  --danger: #{$red};
+
+  // generic layout
+  --border-radius: 10px;
+  --border-colour: #{$grey_dark};
+  --border-width: 1px;
+  --border-style: solid;
+
+  // transitions
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease-in-out;
+}

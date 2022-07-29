@@ -1,0 +1,32 @@
+@import './useCreateContainerQueries.mixins.scss';
+
+.container {
+  &:root {
+    --width: 0;
+  }
+
+  position: relative;
+
+  &:after {
+    counter-reset: variable var(--width);
+    content: counter(variable) 'px';
+
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 700;
+
+    // center the counter text
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include useContainerQuery('minWidth', 400) {
+    background-color: aqua;
+  }
+
+  @include useContainerQuery('minWidth', 600) {
+    background-color: deeppink;
+  }
+}

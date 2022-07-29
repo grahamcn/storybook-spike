@@ -1,0 +1,35 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Checkbox } from "./CheckboxInput";
+
+<Meta title="Atoms/Form Controls/Checkbox" component={Checkbox} />
+
+export const Template = (args) => <Checkbox {...args} />;
+
+# Checkbox
+
+### Example Markup
+
+```html
+<div class="form-control checkbox">
+  <label for="checkbox-1" class="label">
+    <input type="checkbox" id="checkbox-1" name="checkbox-1" />
+
+    <span class="label-content">
+      Checkbox Label
+    </span>
+  </label>
+</div>
+```
+
+<Canvas>
+  <Story
+    name="Checkbox"
+    args={{
+      name: "checkbox-1",
+      children: "Checkbox Label",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

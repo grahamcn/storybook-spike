@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  .list-item {
+    + .list-item {
+      margin-top: var(--margin);
+    }
+  }
+
+  &.inline {
+    flex-direction: row;
+
+    .list-item {
+      flex-grow: 1;
+
+      + .list-item {
+        margin-top: 0;
+      }
+    }
+  }
+}

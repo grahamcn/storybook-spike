@@ -1,0 +1,93 @@
+@import '../../styles/utility/breakpoints/mixins.scss';
+@import './scaling.scss';
+
+/**
+Define the list of responsive fonts from which the app can draw from.
+
+       BASE   S    M    L    XL   XXL  Usage
+----------------------------------------------------
+100      12 | 12 | 13 | 13 | 14 | 14   Copyright, H6
+200      15 | 15 | 16 | 16 | 17 | 17   Helper text, error text, H5, Form label
+300      16 | 16 | 18 | 18 | 20 | 20   Paragraphs, Copy, Button text, H4, Input text
+400      17 | 17 | 20 | 20 | 22 | 22   H3, sub section heading, legend
+500      18 | 18 | 22 | 22 | 24 | 24   Section heading, H2
+600      20 | 20 | 24 | 24 | 28 | 28   H1 / Screen Title
+*/
+
+@mixin responsiveFont-100() {
+  @include fontSize-12;
+
+  @include screen-md {
+    @include fontSize-13;
+  }
+
+  @include screen-xl {
+    @include fontSize-14;
+  }
+}
+
+@mixin responsiveFont-200() {
+  @include fontSize-15;
+
+  @include screen-md {
+    @include fontSize-16;
+  }
+
+  @include screen-xl {
+    @include fontSize-17;
+  }
+}
+
+@mixin responsiveFont-300() {
+  @include fontSize-16;
+
+  @include screen-md {
+    @include fontSize-18;
+  }
+
+  @include screen-xl {
+    @include fontSize-20;
+  }
+}
+
+@mixin responsiveFont-400() {
+  @include fontSize-17;
+
+  @include screen-md {
+    @include fontSize-20;
+  }
+
+  @include screen-xl {
+    @include fontSize-22;
+  }
+}
+
+@mixin responsiveFont-500() {
+  @include fontSize-18;
+
+  @include screen-md {
+    @include fontSize-22;
+  }
+
+  @include screen-xl {
+    @include fontSize-24;
+  }
+}
+
+@mixin responsiveFont-600() {
+  @include fontSize-20;
+
+  @include screen-md {
+    @include fontSize-24;
+  }
+
+  @include screen-xl {
+    @include fontSize-28;
+  }
+}
+
+// @todo move
+@font-face {
+  font-family: "Gorrila";
+  src: local("Gorrila"), url(/src/styles/typography//adventure-bible//fonts/Godzilla.ttf) format("woff");
+}

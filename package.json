@@ -1,0 +1,47 @@
+{
+  "name": "storybook-spike",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.2"
+  },
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@storybook/addon-a11y": "^6.4.18",
+    "@storybook/addon-actions": "^6.4.13",
+    "@storybook/addon-essentials": "^6.4.13",
+    "@storybook/addon-links": "^6.4.13",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.4.13",
+    "babel-loader": "^8.2.3",
+    "css-loader": "5.2.7",
+    "sass": "^1.48.0",
+    "sass-loader": "10.1.1",
+    "style-loader": "^2"
+  }
+}

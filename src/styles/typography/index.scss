@@ -1,0 +1,49 @@
+// Make a typography available to the app
+// This is effectively the typography theme file.
+
+@import './clamped/major-second/mixins.scss';
+// @import './adventure-bible/mixins.scss';
+
+/**
+* Set default weight for headings, remove margin as handled by heading container/layout elements
+Thought required, but this is essentially the general typograph theme application.
+Buttons, for example, will select the repsonsive typography to use.
+*/
+
+h1 {
+  @include responsiveFont-600();
+}
+
+h2 {
+  @include responsiveFont-500();
+}
+
+h3 {
+  @include responsiveFont-400();
+}
+
+h4 {
+  @include responsiveFont-300();
+}
+
+h5 {
+  @include responsiveFont-200();
+}
+
+h6 {
+  @include responsiveFont-100();
+}
+
+p {
+  @include responsiveFont-300();
+}
+
+body {
+  @include responsiveFont-300();
+
+  // @todo font families shluld be defined and drawn on.
+  font-family: "Montserrat", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

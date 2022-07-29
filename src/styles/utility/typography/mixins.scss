@@ -1,0 +1,6 @@
+// @todo comment behaviour and usage appropriately
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

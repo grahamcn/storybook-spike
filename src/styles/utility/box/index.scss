@@ -1,0 +1,12 @@
+.box {
+  display: block;
+  padding: var(--padding);
+
+  &.tight {
+    padding: var(--padding-tight);
+  }
+
+  &.loose {
+    padding: var(--padding-loose);
+  }
+}

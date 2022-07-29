@@ -1,0 +1,61 @@
+// import and expose scss for each component
+// import required mixins
+@import '../../styles/utility/accessibility/mixins.scss';
+@import '../../styles/typography/index.scss';
+
+// generic form element reset, handle text type date input etc
+// this should perhaps be moved to the forms folder under conponents, as the partials in there build on these
+// rules
+
+input,
+textarea,
+select {
+  font: iherit;
+}
+
+.form {
+  max-width: 40rem;
+
+  .required-fields-message {
+    // @include screenReaderOnly();
+
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.form-control {
+  margin-bottom: 0;
+  width: 100%;
+
+  .input {
+    @include responsiveFont-300();
+  }
+
+  .label {
+    @include responsiveFont-200();
+
+    display: block;
+
+    // As this is cosmetic only on a label, could be CSS
+    .label-text:after {
+      content: ':'
+    }
+
+    .required-field-indicator {
+      // @include screenReaderOnly();
+
+      > abbr {
+        color: inherit;
+        border-bottom: none;
+        text-decoration: none;
+        vertical-align: text-top;
+      }
+    }
+  }
+}
+
+@import './checkboxes/CheckboxInput.scss';
+@import './radio-group-input/RadioGroupInput.scss';
+@import './radio-group-input/RadioGroupInput.scss';
+

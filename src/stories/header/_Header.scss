@@ -1,0 +1,8 @@
+/**
+* The heading aspect of a header, the text size specifically, will be picked up via the Heading varaint's
+* responsive font size usage.
+* Margins are also responsive via custom css properties.
+*/
+.header {
+  margin-bottom: calc(var(--margin) * 1px);
+}

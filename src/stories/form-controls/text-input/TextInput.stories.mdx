@@ -1,0 +1,91 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { TextInput } from './TextInput';
+
+<Meta title="Atoms/Form Controls/Text Input" component={TextInput} />
+
+export const Template = (args) => <TextInput {...args} />;
+
+# TextInput
+
+### Example Markup
+
+```html
+<div class="form-control text-input [text-input-type]">
+  <label class="label">
+    <span class="label-text">
+      Required field
+    </span>
+    <span class="required-field-indicator">
+      <abbr title="required">*</abbr>
+    </span>
+  </label>
+  <input class="input text-input" type="text" aria-required="true" value="">
+</div>
+```
+
+<Canvas>
+  <Story
+    name="Text Input"
+    args={{
+      label: 'Text',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Required"
+    args={{
+      label: 'Required field',
+      required: true,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Number"
+    args={{
+      label: 'Number',
+      type: 'number',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Date"
+    args={{
+      label: 'Date',
+      type: 'date',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Password"
+    args={{
+      label: 'Password',
+      type: 'password',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Colour"
+    args={{
+      label: 'Colour',
+      type: 'color',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Hint"
+    args={{
+      label: 'With Hint',
+      hint: 'This field has a hint'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Error"
+    args={{
+      label: 'With Error',
+      error: 'This field has an error'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

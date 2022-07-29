@@ -1,0 +1,34 @@
+@import '../../utility/breakpoints/mixins.scss';
+
+// base values
+:root {
+  --spacing: 12;
+
+  // @todo clamp between the min/max?
+  --margin: calc(var(--spacing) * 1 * 1px);
+
+  --padding: calc(var(--spacing) * 0.5 * 1px);
+  --padding-tight: calc(var(--spacing) * 0.25 * 1px);
+  --padding-loose: calc(var(--spacing) * 1 * 1px);
+}
+
+// overrides
+@include screen-md {
+  :root {
+    --margin: calc(var(--spacing) * 1.5 * 1px);
+
+    --padding: calc(var(--spacing) * 1.5 * 1px);
+    --padding-tight: calc(var(--spacing) * 0.75 * 1px);
+    --padding-loose: calc(var(--spacing) * 2.25 * 1px);
+  }
+}
+
+@include screen-xl {
+  :root {
+    --margin: calc(var(--spacing) * 2 * 1px);
+
+    --padding: calc(var(--spacing) * 2 * 1px);
+    --padding-tight: calc(var(--spacing) * 1 * 1px);
+    --padding-loose: calc(var(--spacing) * 3 * 1px);
+  }
+}

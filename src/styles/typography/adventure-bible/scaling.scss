@@ -1,0 +1,62 @@
+@use "sass:math";
+
+// as yet unrequired
+$root-font-size: 20;
+
+// custom ab scale
+// these sizes are then used in the mixins
+
+@mixin fontSize-12() {
+  font-size: 12px; // convert to rem
+  line-height: 1.25;
+}
+
+@mixin fontSize-13() {
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-14() {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-15() {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-16() {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@mixin fontSize-17() {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-18() {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-20() {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-22() {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-24() {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+@mixin fontSize-28() {
+  font-size: 28px;
+  line-height: 1.25;
+}

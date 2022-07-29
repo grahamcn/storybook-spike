@@ -1,0 +1,58 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+import { UseContainerQueries } from "./UseContainerQueries";
+
+<Meta title="Hooks/useCreateContainerQueries" component={UseContainerQueries} />
+
+export const Template = (args) => <UseContainerQueries {...args} />;
+
+# useCreateContainerQueries
+
+### Create container queries for a given DOM element.
+
+## Example
+
+<Canvas>
+  <UseContainerQueries />
+</Canvas>
+
+## Usage
+
+The hook currently supports a `minWidth` "media query".
+
+The hook accepts two parameters:
+
+* A React ref to the DOM element
+* An array of widths (currently px only) at which to create usable breakpoints.
+
+```jsx
+...
+
+const containerEl = useRef<HTMLDivElement>(null);
+useContainerQueries(containerEl, [400, 600]);
+
+<div ref={containerEl} className="container">
+  ...
+</div>
+```
+
+Within your SCSS, the useCreateContainerQueries mixins should be imported
+such that styling for the configured breakpints can be achieved.
+
+The breakpoint values **must** match those specified in the hook parameters.
+
+```css
+@import './useCreateContainerQueries.mixins.scss';
+
+.container {
+  @include useContainerQuery('minWidth', 200) {
+    /* your style rules */
+    background-color: aqua;
+  }
+
+  @include useContainerQuery('minWidth', 400) {
+    /* your style rules */
+    background-color: deeppink;
+  }
+}
+```

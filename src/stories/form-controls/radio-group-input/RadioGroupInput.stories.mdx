@@ -1,0 +1,53 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { RadioGroupInput } from "./RadioGroupInput";
+
+<Meta title="Atoms/Form Controls/Radio Group Input" component={RadioGroupInput} />
+
+export const Template = (args) => <RadioGroupInput {...args} />;
+
+# Radio Group
+
+### Example Markup
+
+```html
+<fieldset class="input radio-group ">
+  <legend class="label">Yes or no</legend>
+  <div class="options">
+    <div class="option">
+      <label for="1">
+        <input type="radio" id="1" name="yesOrNo" value="1" />
+        <span>Yes</span>
+      </label>
+    </div>
+    <div class="option">
+      <label for="0">
+        <input type="radio" id="0" name="yesOrNo" value="0" />
+        <span>No</span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+```
+
+<Canvas>
+  <Story
+    name="Radio Group Input"
+    args={{
+      label: "Yes or no",
+      name: "yesOrNo",
+      options: [
+        {
+          label: "Yes",
+          value: 1,
+        },
+        {
+          label: "No",
+          value: 0,
+        },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

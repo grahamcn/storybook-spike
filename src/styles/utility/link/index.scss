@@ -1,0 +1,26 @@
+.link {
+  --link-opacity: 0.8;
+  --link-transition-duration: var(--transition-duration);
+  --link-transition-timing-function: var(--transition-timing-function);
+}
+
+.link {
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  opacity: --var(--link-opacity);
+  text-decoration: underline;
+  transition: opacity var(--link-transition-duration) var(--link-transition-timing-function);
+
+  &.selected,
+  &:hover {
+    opacity: 1;
+  }
+
+  // When wrapping a linked image
+  &.image-link {
+    opacity: 1;
+    line-height: 1;
+  }
+}
